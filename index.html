@@ -582,6 +582,198 @@
       }
     }
 
+    /* ── PAGE 5: VIDEO ── */
+    #page-video {
+      gap: 14px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-top: 24px;
+      padding-bottom: 60px;
+    }
+
+    #page-video::-webkit-scrollbar {
+      display: none;
+    }
+
+    .video-eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      font-weight: 500;
+      margin-bottom: -4px;
+    }
+
+    .video-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 6.5vw, 44px);
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--rose-deep) 0%, var(--mauve) 50%, var(--rose-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .video-glass-container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid var(--glass-border);
+      border-radius: 28px;
+      padding: 16px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 16px 44px rgba(160, 67, 90, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .video-badge {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rose-deep);
+      background: rgba(192, 121, 138, 0.12);
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(192, 121, 138, 0.25);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      max-height: 48vh;
+      min-height: 240px;
+      aspect-ratio: 9 / 16;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #190f14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(61, 30, 40, 0.25);
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 20px;
+      background: #000;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      text-align: center;
+      background: linear-gradient(160deg, rgba(61, 30, 40, 0.92), rgba(160, 67, 90, 0.88));
+      color: #fff;
+      gap: 12px;
+      z-index: 2;
+      transition: opacity 0.4s ease;
+    }
+
+    .video-placeholder.hidden {
+      display: none !important;
+    }
+
+    .video-placeholder-icon {
+      font-size: 42px;
+      animation: gentle-float 3.2s ease-in-out infinite;
+    }
+
+    .video-placeholder-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-style: italic;
+      color: #ffe6ee;
+      line-height: 1.3;
+    }
+
+    .custom-file-upload {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--rose-deep), var(--rose-dark));
+      color: #fff;
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .custom-file-upload:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .custom-file-upload input[type="file"] {
+      display: none;
+    }
+
+    .video-tip {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.4;
+      max-width: 280px;
+    }
+
+    .video-caption {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: var(--text-mid);
+      font-style: italic;
+      padding: 0 8px;
+      line-height: 1.5;
+    }
+
+    .video-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .ghost-btn {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      color: var(--text-mid);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .ghost-btn:hover {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--rose-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(160, 67, 90, 0.15);
+    }
+
     /* NAV DOTS */
     .nav-dots {
       position: fixed;
@@ -982,6 +1174,47 @@
     <div class="hearts-dance">
       <span>💗</span><span>💓</span><span>💗</span><span>💓</span><span>💗</span>
     </div>
+    <button class="primary-btn" style="margin-top: 14px; font-size: 14px; padding: 14px 28px;" onclick="goToPage('page-video')">
+      🎬 Ada satu video untuk kamu… 🌸
+    </button>
+  </section>
+
+  <!-- PAGE 5 — VIDEO -->
+  <section class="page hidden" id="page-video" aria-label="Video Spesial">
+    <p class="video-eyebrow">🌸 kenangan kita 🌸</p>
+    <h2 class="video-heading">Spesial untuk Zahraa 🎬</h2>
+
+    <div class="video-glass-container">
+      <span class="video-badge">✦ 0:30 Video Kenangan ✦</span>
+
+      <div class="video-frame">
+        <video id="special-video" playsinline controls preload="metadata" poster="photos/photo1.jpeg">
+          <source src="video.mp4" type="video/mp4">
+          <source src="photos/video.mp4" type="video/mp4">
+          Browser Anda belum mendukung pemutaran video.
+        </video>
+
+        <!-- Placeholder & uploader if video.mp4 isn't detected yet -->
+        <div class="video-placeholder" id="video-placeholder">
+          <div class="video-placeholder-icon">🎬</div>
+          <p class="video-placeholder-text">Video Kenangan 30 Detik untuk Zahraa 💕</p>
+          <label class="custom-file-upload">
+            <input type="file" id="video-file-picker" accept="video/*" onchange="loadCustomVideo(event)">
+            <span>📁 Pilih Video Dari Galeri / File</span>
+          </label>
+          <small class="video-tip">Atau simpan file videomu dengan nama <code>video.mp4</code> di folder project ini</small>
+        </div>
+      </div>
+
+      <div class="video-caption">
+        <p><em>"Setiap detik bersamamu selalu jadi momen paling indah dan berharga."</em> 🌸💖</p>
+      </div>
+    </div>
+
+    <div class="video-actions">
+      <button class="ghost-btn" onclick="goToPage('page-yes')">⬅️ Halaman Sebelumnya</button>
+      <button class="ghost-btn" onclick="goToPage('page-open')">🔄 Ulangi Dari Awal</button>
+    </div>
   </section>
 
   <!-- NAV DOTS -->
@@ -990,6 +1223,7 @@
     <div class="ndot" id="ndot-1"></div>
     <div class="ndot" id="ndot-2"></div>
     <div class="ndot" id="ndot-3"></div>
+    <div class="ndot" id="ndot-4"></div>
   </nav>
 
   <script>
@@ -1207,16 +1441,62 @@
     }
 
     /* ── NAVIGATION ── */
-    const pageOrder = ['page-open', 'page-birthday', 'page-confession', 'page-yes'];
+    const pageOrder = ['page-open', 'page-birthday', 'page-confession', 'page-yes', 'page-video'];
     let currentPage = 'page-open';
 
     function goToPage(id) {
+      const vid = document.getElementById('special-video');
+      if (vid && id !== 'page-video') {
+        vid.pause();
+      }
+
       document.getElementById(currentPage).classList.add('hidden');
       document.getElementById(id).classList.remove('hidden');
       currentPage = id;
       const idx = pageOrder.indexOf(id);
       document.querySelectorAll('.ndot').forEach((d, i) => d.classList.toggle('active', i === idx));
       if (id === 'page-yes') launchConfetti();
+      if (id === 'page-video' && vid) {
+        if (vid.src && !vid.src.endsWith('#')) {
+          vid.play().catch(() => {});
+        }
+      }
+    }
+
+    // Enable clicking on dots to navigate directly
+    document.querySelectorAll('.ndot').forEach((dot, index) => {
+      dot.style.cursor = 'pointer';
+      dot.title = `Halaman ${index + 1}`;
+      dot.addEventListener('click', () => {
+        if (pageOrder[index]) goToPage(pageOrder[index]);
+      });
+    });
+
+    /* ── VIDEO HANDLER ── */
+    function loadCustomVideo(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const vid = document.getElementById('special-video');
+      const placeholder = document.getElementById('video-placeholder');
+      const objectUrl = URL.createObjectURL(file);
+      vid.src = objectUrl;
+      vid.load();
+      if (placeholder) placeholder.classList.add('hidden');
+      vid.play().catch(() => {});
+    }
+
+    const specialVid = document.getElementById('special-video');
+    const vidPlaceholder = document.getElementById('video-placeholder');
+    if (specialVid && vidPlaceholder) {
+      specialVid.addEventListener('loadeddata', () => {
+        vidPlaceholder.classList.add('hidden');
+      });
+      specialVid.addEventListener('playing', () => {
+        vidPlaceholder.classList.add('hidden');
+      });
+      specialVid.addEventListener('error', () => {
+        vidPlaceholder.classList.remove('hidden');
+      });
     }
 
     /* ── ENVELOPE ── */
